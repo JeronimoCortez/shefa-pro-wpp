@@ -38,24 +38,6 @@
 		menuNav.classList.remove('--opened');
 	})
 </script>
-<script>
-	const swiper = new Swiper('.swiper-clientes', {
-		pagination: {
-			el: '.swiper-clientes-pagination',
-			clickable: true
-		},
-	});
-	const swiperExitos = new Swiper('.swiper-exitos', {
-		navigation: {
-			nextEl: '.swiper-exitos-button-next',
-			prevEl: '.swiper-exitos-button-prev',
-		},
-		pagination: {
-			el: '.swiper-exitos-pagination',
-			clickable: true
-		},
-	});
-</script>
 
 </body>
 </html>
