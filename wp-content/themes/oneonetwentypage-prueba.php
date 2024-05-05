@@ -1,0 +1,280 @@
+
+Array
+(
+    [0] => Array
+        (
+            [ID] => 40
+            [key] => field_663654cedcd2c
+            [label] => Seccion 1
+            [name] => seccion_1
+            [aria-label] => 
+            [prefix] => acf
+            [type] => group
+            [value] => 
+            [menu_order] => 0
+            [instructions] => 
+            [required] => 0
+            [id] => 
+            [class] => 
+            [conditional_logic] => 0
+            [parent] => 35
+            [wrapper] => Array
+                (
+                    [width] => 
+                    [class] => 
+                    [id] => 
+                )
+
+            [layout] => block
+            [sub_fields] => Array
+                (
+                    [0] => Array
+                        (
+                            [ID] => 41
+                            [key] => field_663654e1dcd2d
+                            [label] => Titulo
+                            [name] => titulo
+                            [aria-label] => 
+                            [prefix] => acf
+                            [type] => text
+                            [value] => 
+                            [menu_order] => 0
+                            [instructions] => 
+                            [required] => 0
+                            [id] => 
+                            [class] => 
+                            [conditional_logic] => 0
+                            [parent] => 40
+                            [wrapper] => Array
+                                (
+                                    [width] => 
+                                    [class] => 
+                                    [id] => 
+                                )
+
+                            [default_value] => 
+                            [maxlength] => 
+                            [placeholder] => 
+                            [prepend] => 
+                            [append] => 
+                            [_name] => titulo
+                            [_valid] => 1
+                        )
+
+                )
+
+            [_name] => seccion_1
+            [_valid] => 1
+        )
+
+)
+
+Array
+(
+    [0] => Array
+        (
+            [ID] => 40
+            [key] => field_663654cedcd2c
+            [label] => Seccion 1
+            [name] => seccion_1
+            [aria-label] => 
+            [prefix] => acf
+            [type] => group
+            [value] => 
+            [menu_order] => 0
+            [instructions] => 
+            [required] => 0
+            [id] => 
+            [class] => 
+            [conditional_logic] => 0
+            [parent] => 35
+            [wrapper] => Array
+                (
+                    [width] => 
+                    [class] => 
+                    [id] => 
+                )
+
+            [layout] => block
+            [sub_fields] => Array
+                (
+                    [0] => Array
+                        (
+                            [ID] => 41
+                            [key] => field_663654e1dcd2d
+                            [label] => Titulo
+                            [name] => titulo
+                            [aria-label] => 
+                            [prefix] => acf
+                            [type] => text
+                            [value] => 
+                            [menu_order] => 0
+                            [instructions] => 
+                            [required] => 0
+                            [id] => 
+                            [class] => 
+                            [conditional_logic] => 0
+                            [parent] => 40
+                            [wrapper] => Array
+                                (
+                                    [width] => 
+                                    [class] => 
+                                    [id] => 
+                                )
+
+                            [default_value] => 
+                            [maxlength] => 
+                            [placeholder] => 
+                            [prepend] => 
+                            [append] => 
+                            [_name] => titulo
+                            [_valid] => 1
+                        )
+
+                )
+
+            [_name] => seccion_1
+            [_valid] => 1
+        )
+
+)
+
+Array
+(
+    [0] => Array
+        (
+            [ID] => 40
+            [key] => field_663654cedcd2c
+            [label] => Seccion 1
+            [name] => seccion_1
+            [aria-label] => 
+            [prefix] => acf
+            [type] => group
+            [value] => 
+            [menu_order] => 0
+            [instructions] => 
+            [required] => 0
+            [id] => 
+            [class] => 
+            [conditional_logic] => 0
+            [parent] => 35
+            [wrapper] => Array
+                (
+                    [width] => 
+                    [class] => 
+                    [id] => 
+                )
+
+            [layout] => block
+            [sub_fields] => Array
+                (
+                    [0] => Array
+                        (
+                            [ID] => 41
+                            [key] => field_663654e1dcd2d
+                            [label] => Titulo
+                            [name] => titulo
+                            [aria-label] => 
+                            [prefix] => acf
+                            [type] => text
+                            [value] => 
+                            [menu_order] => 0
+                            [instructions] => 
+                            [required] => 0
+                            [id] => 
+                            [class] => 
+                            [conditional_logic] => 0
+                            [parent] => 40
+                            [wrapper] => Array
+                                (
+                                    [width] => 
+                                    [class] => 
+                                    [id] => 
+                                )
+
+                            [default_value] => 
+                            [maxlength] => 
+                            [placeholder] => 
+                            [prepend] => 
+                            [append] => 
+                            [_name] => titulo
+                            [_valid] => 1
+                        )
+
+                )
+
+            [_name] => seccion_1
+            [_valid] => 1
+        )
+
+)
+
+Array
+(
+    [0] => Array
+        (
+            [ID] => 40
+            [key] => field_663654cedcd2c
+            [label] => Seccion 1
+            [name] => seccion_1
+            [aria-label] => 
+            [prefix] => acf
+            [type] => group
+            [value] => 
+            [menu_order] => 0
+            [instructions] => 
+            [required] => 0
+            [id] => 
+            [class] => 
+            [conditional_logic] => 0
+            [parent] => 35
+            [wrapper] => Array
+                (
+                    [width] => 
+                    [class] => 
+                    [id] => 
+                )
+
+            [layout] => block
+            [sub_fields] => Array
+                (
+                    [0] => Array
+                        (
+                            [ID] => 41
+                            [key] => field_663654e1dcd2d
+                            [label] => Titulo
+                            [name] => titulo
+                            [aria-label] => 
+                            [prefix] => acf
+                            [type] => text
+                            [value] => 
+                            [menu_order] => 0
+                            [instructions] => 
+                            [required] => 0
+                            [id] => 
+                            [class] => 
+                            [conditional_logic] => 0
+                            [parent] => 40
+                            [wrapper] => Array
+                                (
+                                    [width] => 
+                                    [class] => 
+                                    [id] => 
+                                )
+
+                            [default_value] => 
+                            [maxlength] => 
+                            [placeholder] => 
+                            [prepend] => 
+                            [append] => 
+                            [_name] => titulo
+                            [_valid] => 1
+                        )
+
+                )
+
+            [_name] => seccion_1
+            [_valid] => 1
+        )
+
+)

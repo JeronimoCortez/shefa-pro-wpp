@@ -1,0 +1,21 @@
+name: oneonetwenty
+recipe: wordpress
+proxy:
+  appserver:
+    - oneonetwenty.local
+config:
+  php: '8.0'
+  via: apache
+  webroot: .
+  xdebug: true
+services:
+  database:
+    portforward: true
+    type: mysql
+    creds:
+      user: oneonetwentydb
+      password: oneonetwentydb
+      database: oneonetwentydb
+  pma:
+    type: phpmyadmin
+    hosts: database
