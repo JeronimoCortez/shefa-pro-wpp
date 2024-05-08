@@ -96,32 +96,6 @@ h1.tcp-title {
 	background-color: transparent !important;
 }
 
-/* 404 */
-.tcp-not-found {
-	padding: 68px 0;
-	min-height: calc(100vh - 147px);
-	background-image: url('../images/not-found-bg.jpg');
-	background-size: cover;
-}
-.tcp-not-found h1 {
-	font-size: 32px;
-	font-weight: 600;
-	color: #DDDDDD;
-	margin: 15px 0;
-}
-.tcp-not-found span {
-	font-size: 18px;
-	color: #FFC033;
-}
-.tcp-not-found p {
-	color: #FFF;
-	font-weight: 600;
-	margin-bottom: 20px !important;
-}
-body.error404 .tcp-footer {
-	display: none; /* Lo necesitamos para cargar los scripts pero en el diseño no esta visible */
-}
-
 /* Footer */
 .tcp-footer {
 	background-color: #201C23;
