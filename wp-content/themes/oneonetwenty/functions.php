@@ -361,11 +361,23 @@ function twenty_twenty_one_widgets_init() {
 		)
 	);
 
+	// Oneonetwenty - Custom widgets
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Formulario', 'twentytwentyone' ),
-			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Form widget.', 'twentytwentyone' ),
+			'name'          => esc_html__( 'Custom Widget Area 1', 'twentytwentyone' ),
+			'id'            => 'custom-sidebar-1',
+			'description'   => esc_html__( 'Custom Widget Area 1', 'twentytwentyone' ),
+			'before_widget' => '<section>',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2>',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Custom Widget Area 2', 'twentytwentyone' ),
+			'id'            => 'custom-sidebar-2',
+			'description'   => esc_html__( 'Custom Widget Area 2', 'twentytwentyone' ),
 			'before_widget' => '<section>',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2>',
