@@ -821,7 +821,7 @@ function detectar_creacion_campos_acf($field_group) {
 							file_put_contents($logs_file, print_r($sub_field, true));
 							$sub_fields = $sub_fields . "<a class='tcp-btn' href='<?php echo $" . $slug_grupo . "_fields['" . $sub_field["name"] . "']['value'] ?>'><?php echo $" . $slug_grupo . "_fields['" . $sub_field["name"] . "']['label'] ?></a>\n";
 						} elseif ($sub_field['type'] === 'repeater') {
-							$sub_fields = $sub_fields . "<?php foreach ($" . $slug_grupo ."_fields['" . $sub_field["name"] . "']['sub_fields'] as \$i) {\n echo '';\n  } ?>\n";
+							$sub_fields = $sub_fields . "<?php foreach ($" . $slug_grupo ."_fields['" . $sub_field["name"] . "'] as \$i) {\n echo '';\n  } ?>\n";
 						}
 
 					}
