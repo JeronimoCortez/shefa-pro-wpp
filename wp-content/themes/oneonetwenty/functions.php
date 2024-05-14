@@ -818,8 +818,7 @@ function detectar_creacion_campos_acf($field_group) {
 						} elseif ($sub_field['type'] === 'image') {
 							$sub_fields = $sub_fields . "<img class='max-w-full' src='<?php echo $" . $slug_grupo ."_fields['" . $sub_field["name"] . "']['url'] ?>' alt='<?php echo $" . $slug_grupo ."_fields['" . $sub_field["name"] . "']['alt'] ?>' />";
 						} elseif ($sub_field['type'] === 'link') {
-							file_put_contents($logs_file, print_r($sub_field, true));
-							$sub_fields = $sub_fields . "<a class='tcp-btn' href='<?php echo $" . $slug_grupo . "_fields['" . $sub_field["name"] . "']['value'] ?>'><?php echo $" . $slug_grupo . "_fields['" . $sub_field["name"] . "']['label'] ?></a>\n";
+							$sub_fields = $sub_fields . "<a class='tcp-btn' href='<?php echo $" . $slug_grupo . "_fields['" . $sub_field["name"] . "']['value'] ?>'><?php echo $" . $slug_grupo . "_fields['" . $sub_field["name"] . "']['title'] ?></a>\n";
 						} elseif ($sub_field['type'] === 'repeater') {
 							$sub_fields = $sub_fields . "<?php foreach ($" . $slug_grupo ."_fields['" . $sub_field["name"] . "'] as \$i) {\n echo '';\n  } ?>\n";
 						}
