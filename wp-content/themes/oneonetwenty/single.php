@@ -3,13 +3,13 @@
 $related_posts = new WP_Query(
 	array(
 		'type' => 'post',
-		'posts_count' => 3
+		'posts_per_page' => 3
 	)
 );
 
 get_header(); ?>
 
-<section class="max-w-[1200px] mx-auto py-[20px]">
+<section class="max-w-[1200px] mx-auto py-[20px] px-4">
 	<p class="mb-0"><a href="/">Home</a> > <?php echo $post->post_title ?></p>
 </section>
 <section class="tcp-post__body px-4">
