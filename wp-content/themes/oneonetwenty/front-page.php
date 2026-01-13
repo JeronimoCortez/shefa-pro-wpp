@@ -1,4 +1,6 @@
-<?php get_header() ?>
+<?php 
+$hero_fields = get_field("hero");
+get_header(); ?>
 
 <a href="https://wa.me/5491166685574" target="_blank" class="whatsapp-btn fixed bottom-6 right-6 z-[1001] bg-[#25D366] p-3 rounded-full shadow-lg hover:bg-[#20ba5a] transition">
       <img src="./message-circle-verde.svg" alt="WhatsApp" class="w-6 h-6 sm:w-8 sm:h-8" />
@@ -7,7 +9,7 @@
     <!-- HERO -->
     <section class="hero w-full min-h-screen text-white">
       <div
-        class="bg-[url('./shefa-hero-img.png')] bg-cover relative bg-no-repeat bg-center w-full min-h-screen flex items-center justify-center"
+        class="bg-[url(<?php echo $hero_fields["fondo"]["url"]?>)] bg-cover relative bg-no-repeat bg-center w-full min-h-screen flex items-center justify-center"
       >
         <div
           class="bg-[#000000]/60 top-0 left-0 z-[999] absolute w-full h-full"
@@ -15,9 +17,11 @@
         <div class="relative z-[1000] w-full px-4 sm:px-6 md:px-8 lg:px-16">
           <div class="flex flex-col gap-4 max-w-8xl mx-auto justify-center items-center">
             <h1
-              class="text-center text-xl sm:text-2xl md:text-2xl lg:text-4xl font-thin"
+              class="text-center text-xl sm:text-2xl md:text-2xl lg:text-4xl font-thin uppercase"
             >
-              <span class="font-semibold">SHEFA</span> PRO
+            <?php 
+            echo $hero_fields["titulo"] ?>
+              <!-- <span class="font-semibold">SHEFA</span> PRO -->
             </h1>
             <h2
               class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold"
