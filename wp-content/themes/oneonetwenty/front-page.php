@@ -36,20 +36,22 @@ get_header(); ?>
           echo $hero_fields["lista_productos"] ?>
         </p>
         <p class="mt-3 sm:mt-4">
-          <?php 
-            echo $hero_fields["mensaje_comercial"] ?> 
+          <?php
+          echo $hero_fields["mensaje_comercial"] ?>
         </p>
       </div>
       <div class="flex justify-center mt-6 sm:mt-8">
         <button
           class="bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:bg-[#1f5517] transition">
-          <img src="wp-content\themes\oneonetwenty\assets\images\message-circle.webp" alt="icon-wpp" class="w-5 h-5 sm:w-6 sm:h-6" />
-          <span><?php 
-            echo $hero_fields["llamado_a_la_accion"] ?> </span>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
+            class="w-5 h-5 sm:w-6 sm:h-6" />
+          <span><?php
+          echo $hero_fields["llamado_a_la_accion"] ?> </span>
         </button>
       </div>
     </div>
   </div>
+
   <!-- PRODUCTOS -->
   <section class="bg-[#EBEBE8] p-4 sm:p-6 md:p-8 w-full">
     <div class="max-w-6xl mx-auto flex flex-col gap-4">
