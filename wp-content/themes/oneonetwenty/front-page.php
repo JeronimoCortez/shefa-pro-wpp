@@ -16,18 +16,20 @@ get_header(); ?>
         ></div>
         <div class="relative z-[1000] w-full px-4 sm:px-6 md:px-8 lg:px-16">
           <div class="flex flex-col gap-4 max-w-8xl mx-auto justify-center items-center">
-            <h1
+            <h2
               class="text-center text-xl sm:text-2xl md:text-2xl lg:text-4xl font-thin uppercase"
             >
+              <span class="font-semibold">
             <?php 
-            echo $hero_fields["titulo"] ?>
-              <!-- <span class="font-semibold">SHEFA</span> PRO -->
-            </h1>
-            <h2
+            echo $hero_fields["titulo"]["destacado"] ?></span> 
+            <?php 
+            echo $hero_fields["titulo"]["principal"] ?> 
+            </h2>
+            <h1
               class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold"
             >
               Insumos de obra de alta calidad, a precio de oportunidad
-            </h2>
+            </h1>
             <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-regular">
               En Shefa Pro comercializamos materiales de obra provenientes de
               remanentes de importación de una desarrolladora inmobiliaria de
