@@ -1,10 +1,12 @@
 <?php
 $hero_fields = get_field("hero");
+$productos_fields = get_field("productos");
 get_header(); ?>
 
 <a href="https://wa.me/5491166685574" target="_blank"
   class="whatsapp-btn fixed bottom-6 right-6 z-[1001] bg-[#25D366] p-3 rounded-full shadow-lg hover:bg-[#20ba5a] transition">
-  <img src="./message-circle-verde.svg" alt="WhatsApp" class="w-6 h-6 sm:w-8 sm:h-8" />
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
+    class="w-6 h-6 sm:w-8 sm:h-8" />
 </a>
 
 <!-- HERO -->
@@ -55,80 +57,64 @@ get_header(); ?>
   <!-- PRODUCTOS -->
   <section class="bg-[#EBEBE8] p-4 sm:p-6 md:p-8 w-full">
     <div class="max-w-6xl mx-auto flex flex-col gap-4">
-      <h3 class=" text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold p-2">
-        Productos disponibles para obra
+      <h3 class="text-[#000] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold p-2">
+        <?php
+        echo $productos_fields["titulo"] ?>
       </h3>
       <p class="text-sm sm:text-base md:text-lg text-[#555555] p-2">
-        Materiales ideales para constructoras, arquitectos, desarrolladores,
-        electricistas y obras en ejecución.
+        <?php
+        echo $productos_fields["descripcion"] ?>
       </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
-        <!-- Zócalos -->
-        <div class="bg-white rounded-lg overflow-hidden flex flex-col">
-          <img src="./zocalos.jpeg" alt="Zócalos img" class="w-full object-cover h-40 sm:h-44" />
-          <div class="p-3 sm:p-4 flex flex-col gap-2">
-            <p class="font-bold text-sm sm:text-base">Zócalos</p>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Terminaciones de alta calidad para obras exigentes.
-            </p>
-          </div>
+      <?php if (!empty($productos_fields['lista_productos']) && is_array($hero_fields['lista_productos'])): ?>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
+
+          <?php foreach ($productos_fields['lista_productos'] as $producto): ?>
+
+            <?php
+            $titulo = $producto['titulo'] ?? '';
+            $descripcion = $producto['descripcion'] ?? '';
+            $imagen = $producto['imagen'] ?? null;
+
+            if (empty($titulo) || empty($descripcion)) {
+              continue; 
+            }
+            ?>
+
+            <div class="bg-white rounded-lg overflow-hidden flex flex-col">
+
+              <?php if (!empty($imagen['url'])): ?>
+                <img src="<?php echo esc_url($imagen['url']); ?>" alt="<?php echo esc_attr($imagen['alt'] ?? $titulo); ?>"
+                  class="w-full object-cover h-40 sm:h-44" />
+              <?php endif; ?>
+
+              <div class="p-3 sm:p-4 flex flex-col gap-2">
+                <p class="font-bold text-sm sm:text-base">
+                  <?php echo esc_html($titulo); ?>
+                </p>
+                <p class="text-xs sm:text-sm text-gray-600">
+                  <?php echo esc_html($descripcion); ?>
+                </p>
+              </div>
+
+            </div>
+
+          <?php endforeach; ?>
+
         </div>
+      <?php endif; ?>
 
-        <!-- Teclas y enchufes -->
-        <div class="bg-white rounded-lg overflow-hidden flex flex-col">
-          <img src="./teclas-enchufes.jpeg" alt="teclas y enchufes img" class="w-full object-cover h-40 sm:h-44" />
-          <div class="p-3 sm:p-4 flex flex-col gap-2">
-            <p class="font-bold text-sm sm:text-base">Teclas y enchufes</p>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Componentes eléctricos de primera marca.
-            </p>
-          </div>
-        </div>
+    <p class="text-xs sm:text-sm font-light text-[#555555] text-center my-2">
+      <?php
+        echo $productos_fields["texto_informativo"] ?>
+    </p>
 
-        <!-- Placas PVC -->
-        <div class="bg-white rounded-lg overflow-hidden flex flex-col">
-          <img src="./placas-pvc.png" alt="Placas PVC img" class="w-full object-cover h-40 sm:h-44" />
-          <div class="p-3 sm:p-4 flex flex-col gap-2">
-            <p class="font-bold text-sm sm:text-base">Placas PVC</p>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Revestimientos estéticos y duraderos.
-            </p>
-          </div>
-        </div>
-
-        <!-- Espejo -->
-        <div class="bg-white rounded-lg overflow-hidden flex flex-col">
-          <img src="./espejos.png" alt="Espejo LED img" class="w-full object-cover h-40 sm:h-44" />
-          <div class="p-3 sm:p-4 flex flex-col gap-2">
-            <p class="font-bold text-sm sm:text-base">
-              Espejo Rectangular Retroiluminado LED
-            </p>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Diseño moderno con luz LED integrada
-            </p>
-          </div>
-        </div>
-
-        <!-- Otros insumos -->
-        <div class="bg-white rounded-lg p-3 sm:p-4 flex flex-col justify-center gap-2">
-          <p class="font-bold text-sm sm:text-base">Otros insumos de obra</p>
-          <p class="text-xs sm:text-sm text-gray-600">
-            Variedad de materiales según stock disponible.
-          </p>
-        </div>
-      </div>
-
-      <p class="text-xs sm:text-sm font-light text-[#555555] text-center my-2">
-        Stock variable – consultá disponibilidad y precios actualizados por
-        WhatsApp.
-      </p>
-
-      <button
-        class="bg-[#2F7823] w-full py-2 sm:py-3 rounded flex justify-center items-center gap-2 sm:gap-4 text-white text-sm sm:text-base hover:bg-[#1f5517] transition">
-        <img src="./message-circle.png" alt="icon-wpp" class="w-5 h-5" />
-        <span>Ver productos y precios por WhatsApp</span>
-      </button>
+    <button
+      class="bg-[#2F7823] w-full py-2 sm:py-3 rounded flex justify-center items-center gap-2 sm:gap-4 text-white text-sm sm:text-base hover:bg-[#1f5517] transition">
+      <img src="./message-circle.png" alt="icon-wpp" class="w-5 h-5" />
+      <span><?php
+        echo $productos_fields["llamado_a_la_accion"] ?></span>
+    </button>
     </div>
   </section>
 
