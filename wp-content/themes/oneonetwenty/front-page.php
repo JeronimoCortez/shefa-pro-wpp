@@ -42,7 +42,7 @@ get_header(); ?>
       </div>
       <div class="flex justify-center mt-6 sm:mt-8">
         <button
-          class="bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:bg-[#1f5517] transition">
+          class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base !hover:bg-[#1f5517] !transition">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
             class="w-5 h-5 sm:w-6 sm:h-6" />
           <span><?php
