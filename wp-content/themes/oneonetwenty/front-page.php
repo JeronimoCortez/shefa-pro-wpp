@@ -55,3 +55,229 @@
           </div>
         </div>
       </div>
+       <!-- PRODUCTOS -->
+    <section class="bg-[#EBEBE8] p-4 sm:p-6 md:p-8 w-full">
+      <div class="max-w-6xl mx-auto flex flex-col gap-4">
+        <h3
+          class=" text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold p-2"
+        >
+          Productos disponibles para obra
+        </h3>
+        <p class="text-sm sm:text-base md:text-lg text-[#555555] p-2">
+          Materiales ideales para constructoras, arquitectos, desarrolladores,
+          electricistas y obras en ejecución.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
+          <!-- Zócalos -->
+          <div class="bg-white rounded-lg overflow-hidden flex flex-col">
+            <img
+              src="./zocalos.jpeg"
+              alt="Zócalos img"
+              class="w-full object-cover h-40 sm:h-44"
+            />
+            <div class="p-3 sm:p-4 flex flex-col gap-2">
+              <p class="font-bold text-sm sm:text-base">Zócalos</p>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Terminaciones de alta calidad para obras exigentes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Teclas y enchufes -->
+          <div class="bg-white rounded-lg overflow-hidden flex flex-col">
+            <img
+              src="./teclas-enchufes.jpeg"
+              alt="teclas y enchufes img"
+              class="w-full object-cover h-40 sm:h-44"
+            />
+            <div class="p-3 sm:p-4 flex flex-col gap-2">
+              <p class="font-bold text-sm sm:text-base">Teclas y enchufes</p>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Componentes eléctricos de primera marca.
+              </p>
+            </div>
+          </div>
+
+          <!-- Placas PVC -->
+          <div class="bg-white rounded-lg overflow-hidden flex flex-col">
+            <img
+              src="./placas-pvc.png"
+              alt="Placas PVC img"
+              class="w-full object-cover h-40 sm:h-44"
+            />
+            <div class="p-3 sm:p-4 flex flex-col gap-2">
+              <p class="font-bold text-sm sm:text-base">Placas PVC</p>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Revestimientos estéticos y duraderos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Espejo -->
+          <div class="bg-white rounded-lg overflow-hidden flex flex-col">
+            <img
+              src="./espejos.png"
+              alt="Espejo LED img"
+              class="w-full object-cover h-40 sm:h-44"
+            />
+            <div class="p-3 sm:p-4 flex flex-col gap-2">
+              <p class="font-bold text-sm sm:text-base">
+                Espejo Rectangular Retroiluminado LED
+              </p>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Diseño moderno con luz LED integrada
+              </p>
+            </div>
+          </div>
+
+          <!-- Otros insumos -->
+          <div
+            class="bg-white rounded-lg p-3 sm:p-4 flex flex-col justify-center gap-2"
+          >
+            <p class="font-bold text-sm sm:text-base">Otros insumos de obra</p>
+            <p class="text-xs sm:text-sm text-gray-600">
+              Variedad de materiales según stock disponible.
+            </p>
+          </div>
+        </div>
+
+        <p
+          class="text-xs sm:text-sm font-light text-[#555555] text-center my-2"
+        >
+          Stock variable – consultá disponibilidad y precios actualizados por
+          WhatsApp.
+        </p>
+
+        <button
+          class="bg-[#2F7823] w-full py-2 sm:py-3 rounded flex justify-center items-center gap-2 sm:gap-4 text-white text-sm sm:text-base hover:bg-[#1f5517] transition"
+        >
+          <img src="./message-circle.png" alt="icon-wpp" class="w-5 h-5" />
+          <span>Ver productos y precios por WhatsApp</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- About US -->
+    <section class="my-16 w-full px-4 sm:px-6 md:px-8">
+      <div class="max-w-6xl mx-auto flex flex-col gap-4">
+        <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
+          ¿Sos profesional y estas cotizando una obra?
+        </h3>
+        <p class="text-sm sm:text-base md:text-lg">
+          Escribinos y te asesoramos según tu necesidad. Atendemos consultas de
+          profesionales, obras en curso y compras por volumen.
+        </p>
+        <div class="flex flex-col gap-3 my-2">
+          <p class="flex gap-2 text-sm sm:text-base">
+            <img
+              src="./check.svg"
+              alt="check icon"
+              class="w-5 h-5 flex-shrink-0"
+            />Productos nuevos
+          </p>
+          <p class="flex gap-2 text-sm sm:text-base">
+            <img
+              src="./check.svg"
+              alt="check icon"
+              class="w-5 h-5 flex-shrink-0"
+            />Calidad de desarrollo inmobiliario
+          </p>
+          <p class="flex gap-2 text-sm sm:text-base">
+            <img
+              src="./check.svg"
+              alt="check icon"
+              class="w-5 h-5 flex-shrink-0"
+            />Precios por debajo de mercado
+          </p>
+          <p class="flex gap-2 text-sm sm:text-base">
+            <img
+              src="./check.svg"
+              alt="check icon"
+              class="w-5 h-5 flex-shrink-0"
+            />Atención directa y rápida
+          </p>
+        </div>
+        <button
+          class="bg-[#2F7823] w-full sm:w-auto py-2 sm:py-3 rounded flex justify-center items-center gap-2 sm:gap-4 text-white text-sm sm:text-base hover:bg-[#1f5517] transition"
+        >
+          <img
+            src="./message-circle.png"
+            alt="icon-wpp"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+          Hablar ahora por WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#EBEBE8] p-4 sm:p-6 md:p-8">
+      <p
+        class="text-[#4A4A42] text-sm sm:text-base md:text-lg text-center font-semibold mb-6"
+      >
+        Seguinos y conocé mas de Shefa Home
+      </p>
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6"
+      >
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img
+            src="./instagram.svg"
+            alt="Instagram logo"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+          <a
+            href=""
+            class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"
+            >@shefahome.ba</a
+          >
+        </div>
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img
+            src="./facebook.svg"
+            alt="Facebook logo"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+          <a
+            href=""
+            class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"
+            >Shefa Home</a
+          >
+        </div>
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img
+            src="./message-circle-verde.svg"
+            alt="WhatsApp logo"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+          <a
+            href=""
+            class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"
+            >+5491166685574</a
+          >
+        </div>
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img
+            src="./truck.svg"
+            alt="Envios logo"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+          <p
+            class="text-xs sm:text-sm md:text-base text-[#4A4A42]"
+            >Envios a todo el país</p
+          >
+        </div>
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img
+            src="./dollar-sign.svg"
+            alt="Pagos logo"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+          <p
+            class="text-xs sm:text-sm md:text-base text-[#4A4A42]"
+            >Aceptamos todos los medios de pago</p
+          >
+        </div>
+      </div>
+    </footer>
