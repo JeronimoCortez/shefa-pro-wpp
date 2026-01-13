@@ -718,7 +718,7 @@ function detectar_creacion_pagina($post_id, $post, $update) {
 }
 
 // Agregar la función al gancho save_post
-add_action('save_post', 'detectar_creacion_pagina', 10, 3);
+//add_action('save_post', 'detectar_creacion_pagina', 10, 3);
 
 // --- Función para detectar la creación de campos personalizados
 function detectar_creacion_campos_acf($field_group) {
@@ -821,6 +821,18 @@ function detectar_creacion_campos_acf($field_group) {
 							$sub_fields = $sub_fields . "<a class='tcp-btn' href='<?php echo $" . $slug_grupo . "_fields['" . $sub_field["name"] . "']['url'] ?>'><?php echo $" . $slug_grupo . "_fields['" . $sub_field["name"] . "']['title'] ?></a>\n";
 						} elseif ($sub_field['type'] === 'repeater') {
 							$sub_fields = $sub_fields . "<?php foreach ($" . $slug_grupo ."_fields['" . $sub_field["name"] . "'] as \$i) {\n echo '';\n  } ?>\n";
+						}
+
+						// TODO: Si tiene accordion en el nombre crear estructura necesaria
+						if (str_contains($sub_field['name'], 'accordion')) {
+							// <div class="tcp-accordion">
+							// 	<?php foreach ($seccion_faqs_fields['preguntas'] as $i) {
+							// 		echo '<div class="tcp-accordion-item">';
+							// 		echo 	'<h3>' . strip_tags($i['pregunta']) . '</h3>';
+							// 		echo 	'<p class="tcp-accordion-item-content max-h-0 overflow-hidden transition-all">' . strip_tags($i['respuesta'], 'strong') . '</p>';
+							// 		echo '</div>';
+							// 	} cierraPHP
+							// </div>
 						}
 
 					}

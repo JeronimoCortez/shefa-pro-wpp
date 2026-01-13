@@ -1,8 +1,8 @@
-name: oneonetwenty
+name: shefa
 recipe: wordpress
 proxy:
   appserver:
-    - oneonetwenty.local
+    - shefa.local
 config:
   php: '8.0'
   via: apache
@@ -13,9 +13,9 @@ services:
     portforward: true
     type: mysql
     creds:
-      user: oneonetwentydb
-      password: oneonetwentydb
-      database: oneonetwentydb
+      user: shefadb
+      password: shefadb
+      database: shefadb
   pma:
     type: phpmyadmin
     hosts: database
