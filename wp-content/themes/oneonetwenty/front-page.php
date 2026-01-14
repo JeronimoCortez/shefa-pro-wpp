@@ -6,7 +6,7 @@ $footer_fields = get_field("footer");
 $contactos_fields = get_field("contactos");
 get_header(); ?>
 
-<a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank">
+<a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
   class="whatsapp-btn fixed bottom-6 right-6 z-[1001] bg-[#25D366] p-3 rounded-full shadow-lg hover:bg-[#20ba5a]
   transition">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
