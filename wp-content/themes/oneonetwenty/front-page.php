@@ -174,7 +174,7 @@ get_header(); ?>
       <?php endif; ?>
 
       <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
-        class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
+        class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition text-[#fff]">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
           class="w-5 h-5 sm:w-6 sm:h-6" />
         <?php
@@ -213,7 +213,7 @@ get_header(); ?>
         <p class="text-xs sm:text-sm md:text-base text-[#4A4A42]"><?php echo $footer_fields["texto_envios"] ?></p>
       </div>
       <div class="flex items-center justify-center sm:justify-start gap-2">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dolar-sign.svg" alt="Pagos logo"
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dollar-sign.svg" alt="Pagos logo"
           class="w-5 h-5 sm:w-6 sm:h-6" />
         <p class="text-xs sm:text-sm md:text-base text-[#4A4A42]"><?php echo $footer_fields["texto_pagos"] ?></p>
       </div>
