@@ -6,7 +6,7 @@ $footer_fields = get_field("footer");
 $contactos_fields = get_field("contactos");
 get_header(); ?>
 
-<a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
+<a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>?text=<?php echo urlencode($contactos_fields["mensaje_predeterminado_whatsapp"])?>" target="_blank"
   class="whatsapp-btn fixed bottom-6 right-6 z-[1001] bg-[#25D366] p-3 rounded-full shadow-lg hover:bg-[#20ba5a]
   transition">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
@@ -47,7 +47,7 @@ get_header(); ?>
         </p>
       </div>
       <div class="flex justify-center mt-6 sm:mt-8">
-        <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
+        <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>?text=<?php echo urlencode($contactos_fields["mensaje_predeterminado_whatsapp"])?>" target="_blank"
           class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
             class="w-5 h-5 sm:w-6 sm:h-6" />
@@ -133,7 +133,7 @@ get_header(); ?>
         echo $productos_fields["texto_informativo"] ?>
       </p>
 
-      <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
+      <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>?text=<?php echo urlencode($contactos_fields["mensaje_predeterminado_whatsapp"])?>" target="_blank"
         class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
           class="w-5 h-5 sm:w-6 sm:h-6" />
@@ -173,7 +173,7 @@ get_header(); ?>
         </div>
       <?php endif; ?>
 
-      <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
+      <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>?text=<?php echo urlencode($contactos_fields["mensaje_predeterminado_whatsapp"])?>" target="_blank"
         class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition text-[#fff]">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
           class="w-5 h-5 sm:w-6 sm:h-6" />
@@ -193,18 +193,18 @@ get_header(); ?>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.svg" alt="Instagram logo"
           class="w-5 h-5 sm:w-6 sm:h-6" />
         <a href="<?php echo esc_attr($contactos_fields['instagram']); ?>"
-          class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"><?php echo $footer_fields["texto_instagram"] ?></a>
+          class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline" target="_blank"><?php echo $footer_fields["texto_instagram"] ?></a>
       </div>
       <div class="flex items-center justify-center sm:justify-start gap-2">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="Facebook logo"
           class="w-5 h-5 sm:w-6 sm:h-6" />
         <a href="<?php echo esc_attr($contactos_fields['facebook']); ?>"
-          class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"><?php echo $footer_fields["texto_facebook"] ?></a>
+          class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline" target="_blank"><?php echo $footer_fields["texto_facebook"] ?></a>
       </div>
       <div class="flex items-center justify-center sm:justify-start gap-2">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle-verde.svg"
           alt="WhatsApp logo" class="w-5 h-5 sm:w-6 sm:h-6" />
-        <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
+        <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>?text=<?php echo urlencode($contactos_fields["mensaje_predeterminado_whatsapp"])?>" target="_blank"
           class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"><?php echo $footer_fields["texto_whatsapp"] ?></a>
       </div>
       <div class="flex items-center justify-center sm:justify-start gap-2">
