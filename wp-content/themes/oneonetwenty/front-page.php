@@ -66,7 +66,7 @@ get_header(); ?>
         echo $productos_fields["descripcion"] ?>
       </p>
 
-      <?php if (!empty($productos_fields['lista_productos']) && is_array($hero_fields['lista_productos'])): ?>
+      <?php if (!empty($productos_fields['lista_productos']) && is_array($productos_fields['lista_productos'])): ?>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
 
           <?php foreach ($productos_fields['lista_productos'] as $producto): ?>
