@@ -74,8 +74,13 @@ get_header(); ?>
             <?php
             $titulo = $producto['titulo'] ?? '';
             $descripcion = $producto['descripcion'] ?? '';
-            $imagen = $producto['imagen'] ?? null;
 
+            // Imagen segura (ACF puede devolver false)
+            $imagen = is_array($producto['imagen'] ?? null) ? $producto['imagen'] : [];
+            $imagen_url = $imagen['url'] ?? '';
+            $imagen_alt = $imagen['alt'] ?? $titulo;
+
+            // Validación obligatoria
             if (empty($titulo) || empty($descripcion)) {
               continue;
             }
@@ -83,13 +88,13 @@ get_header(); ?>
 
             <div class="bg-white rounded-lg overflow-hidden flex flex-col">
 
-              <?php if (!empty($imagen['url'])): ?>
-                <img src="<?php echo esc_url($imagen['url']); ?>" alt="<?php echo esc_attr($imagen['alt'] ?? $titulo); ?>"
+              <?php if ($imagen_url): ?>
+                <img src="<?php echo esc_url($imagen_url); ?>" alt="<?php echo esc_attr($imagen_alt); ?>"
                   class="w-full object-cover h-40 sm:h-44" />
               <?php endif; ?>
 
               <div class="p-3 sm:p-4 flex flex-col gap-2">
-                <p class="font-bold text-sm sm:text-base">
+                <p class="font-bold text-sm sm:text-base text-[#000]">
                   <?php echo esc_html($titulo); ?>
                 </p>
                 <p class="text-xs sm:text-sm text-gray-600">
@@ -103,6 +108,7 @@ get_header(); ?>
 
         </div>
       <?php endif; ?>
+
 
       <p class="text-xs sm:text-sm font-light text-[#555555] text-center my-2">
         <?php
