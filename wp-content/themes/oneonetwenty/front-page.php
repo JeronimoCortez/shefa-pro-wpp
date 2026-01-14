@@ -80,14 +80,10 @@ get_header(); ?>
             $imagen_url = '';
             $imagen_alt = $titulo;
 
-            if (is_array($imagen)) {
-              // Caso array válido
-              if (!empty($imagen['url'])) {
-                $imagen_url = $imagen['url'];
-                $imagen_alt = $imagen['alt'] ?? $titulo;
-              }
+            if (is_array($imagen) && !empty($imagen['url'])) {
+              $imagen_url = $imagen['url'];
+              $imagen_alt = $imagen['alt'] ?? $titulo;
             } elseif (is_numeric($imagen)) {
-              // Caso ID
               $img = wp_get_attachment_image_src($imagen, 'full');
               if ($img) {
                 $imagen_url = $img[0];
@@ -98,16 +94,20 @@ get_header(); ?>
             if (empty($titulo) || empty($descripcion)) {
               continue;
             }
+
+            // 👉 CONDICIONAL PARA CENTRADO
+            $sin_imagen = empty($imagen_url);
             ?>
 
-            <div class="bg-white rounded-lg overflow-hidden flex flex-col">
+            <div class="bg-white rounded-lg overflow-hidden flex flex-col h-full">
 
               <?php if ($imagen_url): ?>
                 <img src="<?php echo esc_url($imagen_url); ?>" alt="<?php echo esc_attr($imagen_alt); ?>"
                   class="w-full object-cover h-40 sm:h-44" />
               <?php endif; ?>
 
-              <div class="p-3 sm:p-4 flex flex-col gap-2 justify-center items-center">
+              <div
+                class="p-3 sm:p-4 flex flex-col gap-2 flex-1 <?php echo $sin_imagen ? 'justify-center text-center' : ''; ?>">
                 <p class="font-bold text-sm sm:text-base text-[#000]">
                   <?php echo esc_html($titulo); ?>
                 </p>
