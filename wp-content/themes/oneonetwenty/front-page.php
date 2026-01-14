@@ -36,7 +36,7 @@ get_header(); ?>
           echo $hero_fields["descripcion_principal"] ?>
         </p>
       </div>
-      <div class="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg font-semibold text-center max-w-2xl mx-auto">
+      <div class="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg font-semibold text-center max-w-3xl mx-auto">
         <p>
           <?php
           echo $hero_fields["lista_productos"] ?>
