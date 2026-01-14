@@ -77,7 +77,7 @@ get_header(); ?>
             $imagen = $producto['imagen'] ?? null;
 
             if (empty($titulo) || empty($descripcion)) {
-              continue; 
+              continue;
             }
             ?>
 
@@ -104,17 +104,18 @@ get_header(); ?>
         </div>
       <?php endif; ?>
 
-    <p class="text-xs sm:text-sm font-light text-[#555555] text-center my-2">
-      <?php
+      <p class="text-xs sm:text-sm font-light text-[#555555] text-center my-2">
+        <?php
         echo $productos_fields["texto_informativo"] ?>
-    </p>
+      </p>
 
-    <button
-      class="bg-[#2F7823] w-full py-2 sm:py-3 rounded flex justify-center items-center gap-2 sm:gap-4 text-white text-sm sm:text-base hover:bg-[#1f5517] transition">
-      <img src="./message-circle.png" alt="icon-wpp" class="w-5 h-5" />
-      <span><?php
+      <button
+        class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
+          class="w-5 h-5 sm:w-6 sm:h-6" />
+        <span><?php
         echo $productos_fields["llamado_a_la_accion"] ?></span>
-    </button>
+      </button>
     </div>
   </section>
 
