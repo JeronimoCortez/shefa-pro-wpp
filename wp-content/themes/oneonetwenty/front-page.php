@@ -75,10 +75,24 @@ get_header(); ?>
             $titulo = $producto['titulo'] ?? '';
             $descripcion = $producto['descripcion'] ?? '';
 
-            // Imagen segura (ACF puede devolver false)
-            $imagen = is_array($producto['imagen'] ?? null) ? $producto['imagen'] : [];
-            $imagen_url = $imagen['url'] ?? '';
-            $imagen_alt = $imagen['alt'] ?? $titulo;
+            // Normalización de imagen (Group anidado)
+            $imagen = $producto['imagen'] ?? null;
+            $imagen_url = '';
+            $imagen_alt = $titulo;
+
+            if (is_array($imagen)) {
+              // Caso array válido
+              if (!empty($imagen['url'])) {
+                $imagen_url = $imagen['url'];
+                $imagen_alt = $imagen['alt'] ?? $titulo;
+              }
+            } elseif (is_numeric($imagen)) {
+              // Caso ID
+              $img = wp_get_attachment_image_src($imagen, 'full');
+              if ($img) {
+                $imagen_url = $img[0];
+              }
+            }
 
             // Validación obligatoria
             if (empty($titulo) || empty($descripcion)) {
@@ -86,14 +100,7 @@ get_header(); ?>
             }
             ?>
 
-            <div class="bg-white text-[#000] rounded-lg overflow-hidden flex flex-col">
-
-              <?php
-              echo '<pre>';
-              var_dump($imagen_url);
-              var_dump($imagen);
-              echo '</pre>';
-              ?>
+            <div class="bg-white rounded-lg overflow-hidden flex flex-col">
 
               <?php if ($imagen_url): ?>
                 <img src="<?php echo esc_url($imagen_url); ?>" alt="<?php echo esc_attr($imagen_alt); ?>"
@@ -115,6 +122,7 @@ get_header(); ?>
 
         </div>
       <?php endif; ?>
+
 
 
       <p class="text-xs sm:text-sm font-light text-[#555555] text-center my-2">
