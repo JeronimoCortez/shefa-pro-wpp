@@ -86,7 +86,7 @@ get_header(); ?>
             }
             ?>
 
-            <div class="bg-white rounded-lg overflow-hidden flex flex-col">
+            <div class="bg-white text-[#000] rounded-lg overflow-hidden flex flex-col">
 
               <?php
               echo '<pre>';
