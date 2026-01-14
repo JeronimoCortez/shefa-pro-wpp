@@ -88,6 +88,13 @@ get_header(); ?>
 
             <div class="bg-white rounded-lg overflow-hidden flex flex-col">
 
+              <?php
+              echo '<pre>';
+              var_dump($imagen_url);
+              var_dump($imagen);
+              echo '</pre>';
+              ?>
+
               <?php if ($imagen_url): ?>
                 <img src="<?php echo esc_url($imagen_url); ?>" alt="<?php echo esc_attr($imagen_alt); ?>"
                   class="w-full object-cover h-40 sm:h-44" />
