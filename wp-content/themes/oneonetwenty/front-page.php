@@ -159,7 +159,7 @@ get_header(); ?>
 
             <?php if (!empty($item)): ?>
               <p class="flex gap-2 text-sm sm:text-base">
-                <img src="<?php echo get_template_directory_uri(); ?>/check.svg" alt="check icon"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/check.svg" alt="check icon"
                   class="w-5 h-5 flex-shrink-0" />
                 <?php echo esc_html($item); ?>
               </p>
@@ -171,7 +171,7 @@ get_header(); ?>
       <?php endif; ?>
 
       <button
-        class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
+        class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition text-[#fff]">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
           class="w-5 h-5 sm:w-6 sm:h-6" />
         <?php
