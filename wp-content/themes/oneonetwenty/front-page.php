@@ -107,7 +107,7 @@ get_header(); ?>
               <?php endif; ?>
 
               <div
-                class="p-3 sm:p-4 flex flex-col gap-2 flex-1 <?php echo $sin_imagen ? 'justify-center text-center' : ''; ?>">
+                class="p-3 sm:p-4 flex flex-col gap-2 flex-1 <?php echo $sin_imagen ? 'justify-center' : ''; ?>">
                 <p class="font-bold text-sm sm:text-base text-[#000]">
                   <?php echo esc_html($titulo); ?>
                 </p>
