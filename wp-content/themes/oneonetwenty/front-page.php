@@ -1,6 +1,7 @@
 <?php
 $hero_fields = get_field("hero");
 $productos_fields = get_field("productos");
+$sobre_nosotros_fields = get_field("sobre_nosotros");
 get_header(); ?>
 
 <a href="https://wa.me/5491166685574" target="_blank"
@@ -106,8 +107,7 @@ get_header(); ?>
                   class="w-full object-cover h-40 sm:h-44" />
               <?php endif; ?>
 
-              <div
-                class="p-3 sm:p-4 flex flex-col gap-2 flex-1 <?php echo $sin_imagen ? 'justify-center' : ''; ?>">
+              <div class="p-3 sm:p-4 flex flex-col gap-2 flex-1 <?php echo $sin_imagen ? 'justify-center' : ''; ?>">
                 <p class="font-bold text-sm sm:text-base text-[#000]">
                   <?php echo esc_html($titulo); ?>
                 </p>
@@ -141,33 +141,41 @@ get_header(); ?>
   </section>
 
   <!-- About US -->
-  <section class="my-16 w-full px-4 sm:px-6 md:px-8">
+  <section class="my-16 w-full px-4 sm:px-6 md:px-8 text-[#000]">
     <div class="max-w-6xl mx-auto flex flex-col gap-4">
       <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
-        ¿Sos profesional y estas cotizando una obra?
+        <?php
+        echo $sobre_nosotros_fields["titulo"] ?>
       </h3>
       <p class="text-sm sm:text-base md:text-lg">
-        Escribinos y te asesoramos según tu necesidad. Atendemos consultas de
-        profesionales, obras en curso y compras por volumen.
+        <?php
+        echo $sobre_nosotros_fields["descripcion"] ?>
       </p>
-      <div class="flex flex-col gap-3 my-2">
-        <p class="flex gap-2 text-sm sm:text-base">
-          <img src="./check.svg" alt="check icon" class="w-5 h-5 flex-shrink-0" />Productos nuevos
-        </p>
-        <p class="flex gap-2 text-sm sm:text-base">
-          <img src="./check.svg" alt="check icon" class="w-5 h-5 flex-shrink-0" />Calidad de desarrollo inmobiliario
-        </p>
-        <p class="flex gap-2 text-sm sm:text-base">
-          <img src="./check.svg" alt="check icon" class="w-5 h-5 flex-shrink-0" />Precios por debajo de mercado
-        </p>
-        <p class="flex gap-2 text-sm sm:text-base">
-          <img src="./check.svg" alt="check icon" class="w-5 h-5 flex-shrink-0" />Atención directa y rápida
-        </p>
-      </div>
+
+      <?php if (!empty($sobre_nosotros_fields['items']) && is_array($sobre_nosotros_fields['items'])): ?>
+        <div class="flex flex-col gap-3 my-2">
+
+          <?php foreach ($sobre_nosotros_fields['items'] as $item): ?>
+
+            <?php if (!empty($item)): ?>
+              <p class="flex gap-2 text-sm sm:text-base">
+                <img src="<?php echo get_template_directory_uri(); ?>/check.svg" alt="check icon"
+                  class="w-5 h-5 flex-shrink-0" />
+                <?php echo esc_html($item); ?>
+              </p>
+            <?php endif; ?>
+
+          <?php endforeach; ?>
+
+        </div>
+      <?php endif; ?>
+
       <button
-        class="bg-[#2F7823] w-full sm:w-auto py-2 sm:py-3 rounded flex justify-center items-center gap-2 sm:gap-4 text-white text-sm sm:text-base hover:bg-[#1f5517] transition">
-        <img src="./message-circle.png" alt="icon-wpp" class="w-5 h-5 sm:w-6 sm:h-6" />
-        Hablar ahora por WhatsApp
+        class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
+          class="w-5 h-5 sm:w-6 sm:h-6" />
+        <?php
+        echo $sobre_nosotros_fields["llamado_a_la_accion"] ?>
       </button>
     </div>
   </section>
