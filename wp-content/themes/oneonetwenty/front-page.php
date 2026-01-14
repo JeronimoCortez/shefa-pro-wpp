@@ -2,10 +2,13 @@
 $hero_fields = get_field("hero");
 $productos_fields = get_field("productos");
 $sobre_nosotros_fields = get_field("sobre_nosotros");
+$footer_fields = get_field("footer");
+$contactos_fields = get_field("contactos");
 get_header(); ?>
 
-<a href="https://wa.me/5491166685574" target="_blank"
-  class="whatsapp-btn fixed bottom-6 right-6 z-[1001] bg-[#25D366] p-3 rounded-full shadow-lg hover:bg-[#20ba5a] transition">
+<a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank">
+  class="whatsapp-btn fixed bottom-6 right-6 z-[1001] bg-[#25D366] p-3 rounded-full shadow-lg hover:bg-[#20ba5a]
+  transition">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
     class="w-6 h-6 sm:w-8 sm:h-8" />
 </a>
@@ -44,13 +47,13 @@ get_header(); ?>
         </p>
       </div>
       <div class="flex justify-center mt-6 sm:mt-8">
-        <button
+        <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
           class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
             class="w-5 h-5 sm:w-6 sm:h-6" />
           <span><?php
           echo $hero_fields["llamado_a_la_accion"] ?> </span>
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -130,18 +133,18 @@ get_header(); ?>
         echo $productos_fields["texto_informativo"] ?>
       </p>
 
-      <button
+      <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
         class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
           class="w-5 h-5 sm:w-6 sm:h-6" />
         <span><?php
         echo $productos_fields["llamado_a_la_accion"] ?></span>
-      </button>
+      </a>
     </div>
   </section>
 
   <!-- About US -->
-  <section class="my-16 w-full px-4 sm:px-6 md:px-8 text-[#000]">
+  <section class="my-16 w-full px-4 sm:px-6 md:px-8 text-[#000] bg-![#fff]">
     <div class="max-w-6xl mx-auto flex flex-col gap-4">
       <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
         <?php
@@ -170,41 +173,49 @@ get_header(); ?>
         </div>
       <?php endif; ?>
 
-      <button
-        class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition text-[#fff]">
+      <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
+        class="!bg-[#2F7823] w-full sm:w-auto px-6 py-2 rounded flex justify-center items-center gap-2 sm:gap-4 text-sm sm:text-base hover:!bg-[#1f5517] transition">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle.webp" alt="icon-wpp"
           class="w-5 h-5 sm:w-6 sm:h-6" />
         <?php
         echo $sobre_nosotros_fields["llamado_a_la_accion"] ?>
-      </button>
+      </a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="bg-[#EBEBE8] p-4 sm:p-6 md:p-8">
     <p class="text-[#4A4A42] text-sm sm:text-base md:text-lg text-center font-semibold mb-6">
-      Seguinos y conocé mas de Shefa Home
+      <?php echo $footer_fields["titulo"] ?>
     </p>
     <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
       <div class="flex items-center justify-center sm:justify-start gap-2">
-        <img src="./instagram.svg" alt="Instagram logo" class="w-5 h-5 sm:w-6 sm:h-6" />
-        <a href="" class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline">@shefahome.ba</a>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.svg" alt="Instagram logo"
+          class="w-5 h-5 sm:w-6 sm:h-6" />
+        <a href="<?php echo esc_attr($contactos_fields['instagram']); ?>"
+          class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"><?php echo $footer_fields["texto_instagram"] ?></a>
       </div>
       <div class="flex items-center justify-center sm:justify-start gap-2">
-        <img src="./facebook.svg" alt="Facebook logo" class="w-5 h-5 sm:w-6 sm:h-6" />
-        <a href="" class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline">Shefa Home</a>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="Facebook logo"
+          class="w-5 h-5 sm:w-6 sm:h-6" />
+        <a href="<?php echo esc_attr($contactos_fields['facebook']); ?>"
+          class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"><?php echo $footer_fields["texto_facebook"] ?></a>
       </div>
       <div class="flex items-center justify-center sm:justify-start gap-2">
-        <img src="./message-circle-verde.svg" alt="WhatsApp logo" class="w-5 h-5 sm:w-6 sm:h-6" />
-        <a href="" class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline">+5491166685574</a>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/message-circle-verde.svg"
+          alt="WhatsApp logo" class="w-5 h-5 sm:w-6 sm:h-6" />
+        <a href="https://wa.me/<?php echo esc_attr($contactos_fields['whatsapp']); ?>" target="_blank"
+          class="text-xs sm:text-sm md:text-base text-[#4A4A42] hover:underline"><?php echo $footer_fields["texto_whatsapp"] ?></a>
       </div>
       <div class="flex items-center justify-center sm:justify-start gap-2">
-        <img src="./truck.svg" alt="Envios logo" class="w-5 h-5 sm:w-6 sm:h-6" />
-        <p class="text-xs sm:text-sm md:text-base text-[#4A4A42]">Envios a todo el país</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/truck.svg" alt="Envios logo"
+          class="w-5 h-5 sm:w-6 sm:h-6" />
+        <p class="text-xs sm:text-sm md:text-base text-[#4A4A42]"><?php echo $footer_fields["texto_envios"] ?></p>
       </div>
       <div class="flex items-center justify-center sm:justify-start gap-2">
-        <img src="./dollar-sign.svg" alt="Pagos logo" class="w-5 h-5 sm:w-6 sm:h-6" />
-        <p class="text-xs sm:text-sm md:text-base text-[#4A4A42]">Aceptamos todos los medios de pago</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dolar-sign.svg" alt="Pagos logo"
+          class="w-5 h-5 sm:w-6 sm:h-6" />
+        <p class="text-xs sm:text-sm md:text-base text-[#4A4A42]"><?php echo $footer_fields["texto_pagos"] ?></p>
       </div>
     </div>
   </footer>
