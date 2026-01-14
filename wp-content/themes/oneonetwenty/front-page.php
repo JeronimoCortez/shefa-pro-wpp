@@ -107,7 +107,7 @@ get_header(); ?>
                   class="w-full object-cover h-40 sm:h-44" />
               <?php endif; ?>
 
-              <div class="p-3 sm:p-4 flex flex-col gap-2">
+              <div class="p-3 sm:p-4 flex flex-col gap-2 justify-center">
                 <p class="font-bold text-sm sm:text-base text-[#000]">
                   <?php echo esc_html($titulo); ?>
                 </p>
